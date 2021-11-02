@@ -33,6 +33,13 @@ export default function App() {
                         width: 800,
                     }}
                 >
+                    <h2>Assumptions:</h2>
+                    <ol>
+                        <li>You know the basics of GitHub</li>
+                        <li>You can write a React.js app</li>
+                        <li>You understand the concepts behind GET requests and restful API</li>
+                    </ol>
+
                     <h2>Setting Up Your Project</h2>
 
                     <h4>1. Create a github repository and clone it onto your desktop.</h4>
@@ -127,7 +134,7 @@ export default function App() {
                         __author__ = "Jared McArthur"
                         __date__ = "11/01/2021"
                         
-                        from flask import Flask, json, jsonify
+                        from flask import Flask, jsonify
                         from flask.helpers import send_from_directory
                         
                         # comment out on deployment
@@ -228,7 +235,7 @@ export default function App() {
                         // I recommend using pipreqs, unless you're responsible and have a venv for every project
                         // additionally, add:
                         gunicorn==20.1.0
-                        // to your requirements.txt file if it's not there (the version doens't have to be 20.1.0)
+                        // to your requirements.txt file if it's not there (the version doesn't have to be 20.1.0)
                         `)}
                     </SyntaxHighlighter>
                     <p>This is what your files should look like.</p>
