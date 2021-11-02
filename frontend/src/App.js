@@ -217,6 +217,7 @@ export default function App() {
                     <SyntaxHighlighter language="javascript" style={dracula}>
                         {dedent(`
                         // Procfile: keep in mind the spacing
+                        // the second app in the procfile is actually the name of your flask app
                         web gunicorn app:app
                         
                         // to create your requirements.txt file you can either run:
