@@ -105,7 +105,7 @@ export default function App() {
                     <SyntaxHighlighter language="javascript" style={dracula}>
                         {dedent(`
                           // run within the frontend directory
-                          npm start
+                          npm run start
                           `)}
                     </SyntaxHighlighter>
                     <p>The part of your react app that interacts with Flask shouldn't work right now.</p>
