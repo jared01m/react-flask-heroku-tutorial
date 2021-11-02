@@ -162,7 +162,7 @@ export default function App() {
                     <SyntaxHighlighter language="javascript" style={dracula}>
                         {dedent(`
                         // run within the frontend directory
-                        npm start
+                        npm run start
 
                         // run within the root directory
                         python -m flask run
@@ -255,8 +255,7 @@ export default function App() {
                     <MyComponent />
 
                     <h2>Warnings (things that will make you slam your head against a table)</h2>
-                    <p>If you build and deploy to heroku, you will never ever be able to change how the web app looks. I don't know why. I hate this. I tried to edit my app for hours until I gave up, deleted everything, and redid it all.</p>
-                    <p>I figured out the fix, Clear the cache in your browser. Why do browsers have to be so smart these days.</p>
+                    <p>If you build and deploy to heroku, and then you edit your build and redeploy, make sure you refresh your browser's cache so you can see the changes. I wasted so much time wondering why my web app wasn't updating.</p>
                 </Box>
             </body>
         </div>
