@@ -117,14 +117,6 @@ export default function App() {
                     </SyntaxHighlighter>
                     <p>The part of your react app that interacts with Flask shouldn't work right now.</p>
 
-                    <h4>5. When your react app is working, run:</h4>
-                    <SyntaxHighlighter language="javascript" style={dracula}>
-                        {dedent(`
-                        // run within the frontend directory
-                        npm run build
-                        `)}
-                    </SyntaxHighlighter>
-
                     <h2>Creating Your Flask App</h2>
 
                     <h4>6. Create a file called 'app.py' in the root directory.</h4>
@@ -213,14 +205,22 @@ export default function App() {
                         `)}
                     </SyntaxHighlighter>
 
-                    <h4>9. Sign in to your Heroku Account and create a new app.</h4>
+                    <h4>9. Build your React app for production:</h4>
+                    <SyntaxHighlighter language="javascript" style={dracula}>
+                        {dedent(`
+                        // run within the frontend directory
+                        npm run build
+                        `)}
+                    </SyntaxHighlighter>
+
+                    <h4>10. Sign in to your Heroku Account and create a new app.</h4>
                     <img src={new_app} alt={"new_app"} />
                     <img src={create_new_app} alt={"create_new_app"} width="800" />
 
-                    <h4>10. Link your GitHub repository with your Heroku app.</h4>
+                    <h4>11. Link your GitHub repository with your Heroku app.</h4>
                     <img src={connect_to_git} alt={"connect_to_git"} width="800" />
 
-                    <h4>11. Create your Procfile and your requirements.txt and place them within the root directory.</h4>
+                    <h4>12. Create your Procfile and your requirements.txt and place them within the root directory.</h4>
                     <SyntaxHighlighter language="javascript" style={dracula}>
                         {dedent(`
                         // Procfile: keep in mind the spacing
@@ -242,7 +242,7 @@ export default function App() {
                     <img src={heroku_files} alt={"heroku_files"} />
 
 
-                    <h4>12. Push all your files onto Github.</h4>
+                    <h4>13. Push all your files onto Github.</h4>
                     <p>Since there are so many files, the GitHub desktop GUI probably won't work and will just sit there spinning until it dies. Therefore, run these commands:</p>
                     <SyntaxHighlighter language="javascript" style={dracula}>
                         {dedent(`
@@ -253,7 +253,7 @@ export default function App() {
                         `)}
                     </SyntaxHighlighter>
 
-                    <h4>13. Deploy your Heroku app.</h4>
+                    <h4>14. Deploy your Heroku app.</h4>
                     <img src={deploy_project} alt={"deploy_project"} width="800" />
                     <p>Now you should be done.</p>
 
