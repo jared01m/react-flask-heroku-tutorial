@@ -25,6 +25,7 @@ export default function App() {
         <div className="App">
             <header className="App-header">
                 <h1>React + Flask + Heroku Tutorial</h1>
+                <p>https://github.com/jared01m/react-flask-heroku-tutorial</p>
             </header>
             <body className="App-body">
                 <Box
@@ -56,6 +57,9 @@ export default function App() {
                          * @description: This is a button that you can toggle on and off. Very stupid code.
                          * @returns: MyComponent
                          */
+
+                        // It assumes that Flask app is running on port 5000
+                        // By default, the React app runs on 3000 and the Flask app runs on 5000
                         
                         import React, { useState } from "react";
                         import Button from "@mui/material/Button"
@@ -177,6 +181,9 @@ export default function App() {
                         fetch("http://127.0.0.1:5000/toggle_button/" + toggleButton)
                         // to
                         fetch("/toggle_button/" + toggleButton)
+
+                        // the take away is to change "http://127.0.0.1:5000/" to "/"
+                        // since the Flask app's endpoint has changed
                         `)}
                     </SyntaxHighlighter>
                     <SyntaxHighlighter language="python" style={dracula}>
@@ -248,6 +255,7 @@ export default function App() {
 
                     <h2>Warnings (things that will make you slam your head against a table)</h2>
                     <p>If you build and deploy to heroku, you will never ever be able to change how the web app looks. I don't know why. I hate this. I tried to edit my app for hours until I gave up, deleted everything, and redid it all.</p>
+                    <p>I figured out the fix, the new Heroku app name needed to be different from its previous name. This probably has something to do with Heroku refreshing the servers once every 24 hours, but I honestly have no idea.</p>
                 </Box>
             </body>
         </div>
