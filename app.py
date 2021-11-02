@@ -17,7 +17,7 @@ app = Flask(__name__, static_folder="frontend/build", static_url_path="")
 # this method returns the opposite of the current state of the button
 # this would look different for your own personal app
 @app.route("/toggle_button/<button_state>", methods=["GET"])
-def toggle_button(button_state: str) -> str:
+def toggle_button(button_state: str):
     if button_state == "Off":
         output=  "On"
     else:
