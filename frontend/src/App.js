@@ -255,7 +255,7 @@ export default function App() {
 
                     <h2>Warnings (things that will make you slam your head against a table)</h2>
                     <p>If you build and deploy to heroku, you will never ever be able to change how the web app looks. I don't know why. I hate this. I tried to edit my app for hours until I gave up, deleted everything, and redid it all.</p>
-                    <p>I figured out the fix, the new Heroku app name needed to be different from its previous name. This probably has something to do with Heroku refreshing the servers once every 24 hours, but I honestly have no idea.</p>
+                    <p>I figured out the fix, Clear the cache in your browser. Why do browsers have to be so smart these days.</p>
                 </Box>
             </body>
         </div>
