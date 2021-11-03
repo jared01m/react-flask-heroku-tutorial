@@ -70,8 +70,6 @@ export default function App() {
                         
                         import React, { useState } from "react";
                         import Button from "@mui/material/Button"
-                        import Box from "@mui/material/Box"
-                        import "./MyComponent.css"
                         
                         export default function MyComponent() {
                             const [toggleButton, setButton] = useState("Off");
