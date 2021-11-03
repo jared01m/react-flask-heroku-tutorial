@@ -78,31 +78,24 @@ export default function App() {
                         
                             return(
                                 <div>
-                                    <Box
-                                        sx={{
-                                            width: 800,
-                                            border: '1px dashed black'
+                                    This is a button that you can toggle on and off
+                                    <Button
+                                        variant="outlined"
+                                        onClick={() => {
+                                            fetch("http://127.0.0.1:5000/toggle_button/" + toggleButton)
+                                                .then(response => 
+                                                    response.json()
+                                                )
+                                                .then(data => {
+                                                    setButton(data.button)
+                                                })
+                                                .catch(error => {
+                                                    console.log(error)
+                                                })
                                         }}
                                     >
-                                        This is a button that you can toggle on and off
-                                        <Button
-                                            variant="outlined"
-                                            onClick={() => {
-                                                fetch("http://127.0.0.1:5000/toggle_button/" + toggleButton)
-                                                    .then(response => 
-                                                        response.json()
-                                                    )
-                                                    .then(data => {
-                                                        setButton(data.button)
-                                                    })
-                                                    .catch(error => {
-                                                        console.log(error)
-                                                    })
-                                            }}
-                                        >
-                                            {toggleButton}
-                                        </Button>
-                                    </Box>
+                                        {toggleButton}
+                                    </Button>
                                 </div>
                             );
                         }`)}

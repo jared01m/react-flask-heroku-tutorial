@@ -14,30 +14,24 @@ export default function MyComponent() {
 
     return(
         <div>
-            <Box
-                sx={{
-                    width: 800
+            <p>This is a button that you can toggle on and off</p>
+            <Button
+                variant="outlined"
+                onClick={() => {
+                    fetch("/toggle_button/" + toggleButton)
+                        .then(response => 
+                            response.json()
+                        )
+                        .then(data => {
+                            setButton(data.button)
+                        })
+                        .catch(error => {
+                            console.log(error)
+                        })
                 }}
             >
-                <p>This is a button that you can toggle on and off</p>
-                <Button
-                    variant="outlined"
-                    onClick={() => {
-                        fetch("/toggle_button/" + toggleButton)
-                            .then(response => 
-                                response.json()
-                            )
-                            .then(data => {
-                                setButton(data.button)
-                            })
-                            .catch(error => {
-                                console.log(error)
-                            })
-                    }}
-                >
-                    {toggleButton}
-                </Button>
-            </Box>
+                {toggleButton}
+            </Button>
         </div>
     );
 }
