@@ -19,7 +19,7 @@ app = Flask(__name__, static_folder="frontend/build", static_url_path="")
 @app.route("/toggle_button/<button_state>", methods=["GET"])
 def toggle_button(button_state: str):
     if button_state == "Off":
-        output=  "On"
+        output = "On"
     else:
         output = "Off"
     return jsonify(button=output)

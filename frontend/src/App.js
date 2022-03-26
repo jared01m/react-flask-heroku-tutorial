@@ -65,7 +65,7 @@ export default function App() {
                          * @returns: MyComponent
                          */
 
-                        // It assumes that Flask app is running on port 5000
+                        // It assumes the Flask app is running on port 5000
                         // By default, the React app runs on 3000 and the Flask app runs on 5000
                         
                         import React, { useState } from "react";
@@ -134,7 +134,7 @@ export default function App() {
                         @app.route("/toggle_button/<button_state>", methods=["GET"])
                         def toggle_button(button_state: str):
                             if button_state == "Off":
-                                output=  "On"
+                                output = "On"
                             else:
                                 output = "Off"
                             return jsonify(button=output)
@@ -215,7 +215,7 @@ export default function App() {
                     <SyntaxHighlighter language="javascript" style={dracula}>
                         {dedent(`
                         // Procfile: keep in mind the spacing
-                        // the second app in the procfile is actually the name of your flask app
+                        // the second "app" in the procfile is actually the name of your flask app
                         web gunicorn app:app
                         
                         // to create your requirements.txt file you can either run:
@@ -253,7 +253,7 @@ export default function App() {
                     <MyComponent />
 
                     <h2>Warnings (things that will make you slam your head against a table)</h2>
-                    <p>If you build and deploy to heroku, and then you edit your build and redeploy, make sure you refresh your browser's cache so you can see the changes. I wasted so much time wondering why my web app wasn't updating.</p>
+                    <p>Whenever you edit your code after delpoyment, make sure you rebuild the react app and refresh your browser's cache so you can see the changes. I wasted so much time wondering why my web app wasn't updating.</p>
                 </Box>
             </body>
         </div>
